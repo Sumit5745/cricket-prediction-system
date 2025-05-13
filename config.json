@@ -1,0 +1,64 @@
+{
+  "api": {
+    "version": "v1",
+    "title": "Cricket Prediction API",
+    "description": "API for cricket match and player performance prediction",
+    "prefix": "/api/v1"
+  },
+  "data": {
+    "teams_dir": "data/teams",
+    "matches_dir": "data/matches",
+    "predictions_dir": "data/predictions",
+    "historical_dir": "data/historical",
+    "training_dir": "data/training"
+  },
+  "models": {
+    "dir": "models",
+    "trained_dir": "models/trained",
+    "weights_dir": "models/weights"
+  },
+  "fantasy": {
+    "points": {
+      "batting": {
+        "run": 1,
+        "four": 1,
+        "six": 2,
+        "fifty": 8,
+        "hundred": 16,
+        "duck": -2
+      },
+      "bowling": {
+        "wicket": 25,
+        "maiden": 4,
+        "three_wickets": 8,
+        "five_wickets": 16
+      },
+      "fielding": {
+        "catch": 8,
+        "stumping": 12,
+        "run_out": 6
+      },
+      "other": {
+        "captain": 2,
+        "vice_captain": 1.5,
+        "in_playing_xi": 4
+      }
+    }
+  },
+  "prediction": {
+    "match": {
+      "default_format": "T20I",
+      "default_venue": "Neutral Venue"
+    },
+    "player": {
+      "default_format": "T20I",
+      "default_opposition": "Unknown",
+      "default_venue": "Neutral Venue"
+    }
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    "file": "logs/cricket_prediction.log"
+  }
+}
